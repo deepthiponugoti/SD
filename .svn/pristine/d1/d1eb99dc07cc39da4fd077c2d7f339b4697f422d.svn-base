@@ -1,0 +1,85 @@
+[Venkat 06/13/15 07:40 AM MDT]
+review: you're done
+
+1.
+good
+
+2.
+good
+
+3.
+good
+
+------------------------------------------------------------------------------
+[Venkat 06/12/15 06:30 AM MDT]
+review: Discuss and reason.
+
+1.
+Don't show as field what can be shown as a relationship. 
+Show cardinality or multiplicity in relationships, like one to many, for example.
+
+What purpose does the interface serve? Hope to see that explained in part 2.
+
+2.
+Why do we need this interface to access, why not access the class directly?
+Don't tell in the text what can be read from the diagram, instead tell us
+key decisions and main ideas (like responsibilities).
+
+3. 
+Give space after comma.
+
+AWT is not a library that should be used exclusively, Swing was created
+as a wrapper around it, drop the discussion considering AWT. Why not 
+JavaFx, would be a good discussion.
+
+Discuss why this language is your choice.
+
+------------------------------------------------------------------------------
+[Venkat 06/11/15 07:56 AM MDT]
+review: clarify on a few details.
+
+1.
+Remove #uses does not add value or say anything that's not obvious.
+
+grid[][] what type is this?
+
+Make method names verb form (stepToNextGeneration may be instead of nextGeneration).
+
+Bring out clarify of where GUI is handled, where user input is taken, and
+where logic is handled.
+
+2. 
+In the first paragraph mention which will handle what responsibility.
+
+Is the periodicity mentioned in the paragraph 2 the responsibility of
+TwoDGrid or that of the GameOfLife?
+
+3.
+Why have we chosen these things, give reasons.
+
+------------------------------------------------------------------------------
+[Venkat 06/10/15 06:59 AM MDT]
+review: think about single responsibility principle
+
+1. 
+Make the diagram more descriptive, showing multiple classes. One class that does everything is not a good idea. If this one class takes all the responsibilities,  including printing the Grid, or even displaying it, it would fail on the Single Responsibility Principle.
+
+If twoDGrid is a class, then show it as a relationship instead of a field.
+
+Do not show what is not important or something that's obvious, like constructor, for example.
+
+If the jpg was directly created and will be directly edited, that file is sufficient.
+However, if you have another file that you actually edit and jpg is an export from
+that, then store that file in the version control as well. In other words, version
+control should hold all things the each member of pair may edit.
+
+2.
+Instead of discussing each methods individually, discuss, in short paragraphs, 
+the responsibilities of each class (once you modify to include multiple classes
+for different responsibilities). Provide reasons or whys.
+
+3. We know that the program needs a display, a GUI, so what library would be used
+for that?
+
+------------------------------------------------------------------------------
+1 2 3

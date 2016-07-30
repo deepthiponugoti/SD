@@ -1,0 +1,44 @@
+[Venkat 07/29/15 10:16 AM CDT]
+review: take small steps.
+
+Let's get one thing gone before jumping to the next.
+
+------------------------------------------------------------------------------
+[Venkat 07/28/15 09:31 AM CDT]
+review: refocus for to design a core knowledge
+
+See suggestion in code.
+
+------------------------------------------------------------------------------
+[Venkat 07/27/15 05:15 AM MDT]
+review: simplify the interface
+
+Reduce parameters. This will reduce burden on the user and also reduce
+user errors.
+
+------------------------------------------------------------------------------
+[Venkat 07/26/15 18:31 PM MDT]
+review: consider not storing the form as a string
+
+Heading in a good direction. However, consider not storing the form as a string 
+(consider not storing it at all).
+
+Simply tests, sign of design not being focused on the problem.
+
+------------------------------------------------------------------------------
+[Venkat 07/25/15 05:34 AM MDT]
+review: good start
+
+TransformAvatarTest:
+
+The first test method is so long I gave up about 25% into reading the name.
+Make that concise and clear.
+
+Ah, -1, that is not very intuitive. Let's change that to more explicitly convey the intent.
+
+Also, would it be possible to design so that the last test would not be needed?
+
+TransformAvatar:
+Reduce code, a lot. 
+
+------------------------------------------------------------------------------

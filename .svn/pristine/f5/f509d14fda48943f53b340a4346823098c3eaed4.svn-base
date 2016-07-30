@@ -1,0 +1,67 @@
+package assign4;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import java.util.Arrays;
+import java.util.List;
+
+import static junit.framework.TestCase.fail;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+public class TransformAvatarTest {
+
+    TransformAvatar transformAvatar;
+
+    @Before
+    public void setUp(){
+        transformAvatar = new TransformAvatar();
+    }
+
+    @Test
+    public void testCanary() {
+        assertTrue(true);
+    }
+
+    @Test
+    public void checkForTheStateChangeWhenTheCurrentStateIsInTheMiddleOfTheListAndNewStateGoesBackwardInTheList(){
+        List<String> sequenceOfAvatars = Arrays.asList("Bike", "Car", "Plane", "Rocket");
+
+        assertEquals("Bike", transformAvatar.transform(sequenceOfAvatars, "Car", -1));
+    }
+
+    @Test
+    public void checkForTheStateChangeWhenTheCurrentStateIsInTheFirstPositionOfTheListAndNewStateGoesBackwardInTheList(){
+        List<String> sequenceOfAvatars = Arrays.asList("Bike", "Car", "Plane", "Rocket");
+
+        assertEquals("Rocket", transformAvatar.transform(sequenceOfAvatars, "Bike", -1));
+    }
+
+    @Test
+    public void checkForTheStateChangeWhenTheCurrentStateIsInTheMiddleOfTheListAndNewStateGoesForwardInTheList(){
+        List<String> sequenceOfAvatars = Arrays.asList("Bike", "Car", "Plane", "Rocket");
+
+        assertEquals("Rocket", transformAvatar.transform(sequenceOfAvatars, "Plane", 1));
+    }
+
+    @Test
+    public void checkForTheStateChangeWhenTheCurrentStateIsInTheLastPositionOfTheListAndNewStateGoesForwardInTheList(){
+        List<String> sequenceOfAvatars = Arrays.asList("Bike", "Car", "Plane", "Rocket");
+
+        assertEquals("Bike", transformAvatar.transform(sequenceOfAvatars, "Rocket", 1));
+    }
+
+    @Test
+    public void checkForTheStateChangeWhenTheCurrentStateIsInvalid(){
+        List<String> sequenceOfAvatars = Arrays.asList("Bike", "Car", "Plane", "Rocket");
+
+        try {
+            transformAvatar.transform(sequenceOfAvatars, "Van", 1);
+            fail("Test should not come here");
+        }
+        catch (RuntimeException ex){
+            assertEquals("Invalid Current State", ex.getMessage());
+        }
+    }
+}

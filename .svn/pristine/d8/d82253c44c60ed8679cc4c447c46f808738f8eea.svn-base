@@ -1,0 +1,9 @@
+package assign4;
+
+public class TransformAvatar {
+
+    public Avatar transform(Avatar currentAvatar, String stateToBeTransformed) {
+
+        return stateToBeTransformed.equals("PREVIOUS") ? currentAvatar.getPreviousAvatar() : currentAvatar.getNextAvatar();
+    }
+}

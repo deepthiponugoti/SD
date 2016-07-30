@@ -1,0 +1,10 @@
+package assign3;
+
+public class FibonacciNumbersMemorizedTest extends FibonacciBaseClassTest{
+
+    @Override
+    int callGetValue(int position) {
+        return getFibonacciNumbers().getValueMemorized(position);
+
+    }
+}

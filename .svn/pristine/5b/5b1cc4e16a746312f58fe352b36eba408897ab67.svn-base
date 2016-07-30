@@ -1,0 +1,46 @@
+package assign3;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
+public class FibonacciNumbersIterationTest extends FibonacciBaseClassTest {
+
+        FibonacciNumbers fibonacciNumbers;
+
+        @Override
+        public int fibonacciSeries(int position){
+            return fibonacciNumbers.getValueIterative(position);
+        }
+
+        @Before
+        public void setUp() {
+            fibonacciNumbers = new FibonacciNumbers();
+        }
+
+        @Test
+        public void checkForTheZerothPositionOfTheSeriesForIterationFibonacci(){
+            assertEquals(1, fibonacciSeries(0));
+        }
+
+        @Test
+        public void checkForTheFirstPositionOfTheSeriesForIterationFibonacci(){
+            assertEquals(1, fibonacciSeries(1));
+        }
+
+        @Test
+        public void checkForTheFourthPositionOfTheSeriesForIterationFibonacci(){
+            assertEquals(5, fibonacciSeries(4));
+        }
+
+        @Test
+        public void checkForTheSixthPositionOfTheSeriesForIterationFibonacci(){
+            assertEquals(13, fibonacciSeries(6));
+        }
+    }
+
+
+
+
+

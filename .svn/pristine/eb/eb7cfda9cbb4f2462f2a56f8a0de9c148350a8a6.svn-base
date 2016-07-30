@@ -1,0 +1,44 @@
+apply plugin: 'java'
+apply plugin: 'jacoco'
+
+sourceCompatibility = 1.8
+
+dependencies {
+  testCompile group: 'junit', name: 'junit', version: "4.+"
+  testCompile "org.mockito:mockito-core:1.+"
+}
+
+allprojects {
+  tasks.withType(JavaCompile) {
+    options.compilerArgs << '-Xlint:deprecation' << '-Xlint:unchecked'
+  }
+}
+
+repositories {
+  mavenCentral()
+}
+
+task(runtask, dependsOn: 'classes', type: JavaExec) {
+  
+	main = 'assign4.driver.AvatarDriver'
+	classpath = sourceSets.main.runtimeClasspath
+}
+
+
+jacocoTestReport {
+    doFirst{
+        classDirectories = fileTree(
+					dir: './build/classes/main/assign4',
+					excludes: ['**/driver/*.class']
+				)
+    }
+
+    reports {
+        xml.enabled false
+        csv.enabled false
+        html.destination "build/reports/coverageHtml"
+    }
+}
+
+
+defaultTasks 'clean', 'test', 'jacocoTestReport', 'runtask'

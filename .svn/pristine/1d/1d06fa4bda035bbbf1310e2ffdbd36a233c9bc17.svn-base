@@ -1,0 +1,29 @@
+package assign4;
+
+import java.util.List;
+
+public class Player {
+    private List<Avatar> avatars;
+    private Avatar currentAvatar;
+    public enum Direction {PREVIOUS, NEXT};
+
+    public Player(List<Avatar> theAvatars, Avatar theCurrentAvatar){
+        avatars = theAvatars;
+        currentAvatar = theCurrentAvatar;
+    }
+
+    public void performAction(){
+        currentAvatar.performAction();
+    }
+
+//Venkat: Make this a void method
+    public Avatar transform(Direction stateToBeTransformed) { //Venkat: stateToBeTransformed to direction
+        int currentPosition = avatars.indexOf(currentAvatar);
+
+      //Venkat: Make this more readable. First compute the index based on direction.
+        if(stateToBeTransformed.equals(Direction.NEXT))
+           return avatars.get(currentPosition + 1 == avatars.size() ? 0 : currentPosition + 1);
+        else
+            return avatars.get(currentPosition - 1 == -1 ? avatars.size() - 1 : currentPosition - 1);
+    }
+}

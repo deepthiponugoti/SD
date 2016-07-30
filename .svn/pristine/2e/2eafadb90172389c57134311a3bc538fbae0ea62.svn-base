@@ -1,0 +1,41 @@
+package assign4;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+public class AvatarFactoryTest {
+
+    AvatarFactory avatarFactory;
+
+    @Before
+    public void setUp(){
+        avatarFactory = new AvatarFactory();
+    }
+
+    @Test
+    public void testCanary(){
+        assertTrue(true);
+    }
+
+    @Test
+    public void checkForBikeObject() throws Exception{
+            Avatar avatar = avatarFactory.createAvatarFromClassName("Bike");
+            assertTrue(avatar instanceof Bike);
+
+    }
+
+    @Test
+    public void checkForUnknownAvatarInTheList(){
+        try {
+            avatarFactory.createAvatarFromClassName("ship");
+        }
+        catch (Exception ex){
+            assertEquals("An unknown avatar name was given ", ex.getMessage());
+        }
+    }
+
+}
+

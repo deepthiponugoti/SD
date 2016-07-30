@@ -1,0 +1,25 @@
+HW3: Due 11:59PM August 14th
+
+What design principles did you use in assignment 3? Discuss.
+
+1. In assignment 3 mainly two design principles were used :
+
+a)SRP :  We Honoured SRP(Single Responsibility Principle) by implementing two different test classes as both the tests for iterative and recursion do exactly the same, except on two different methods.
+b)DRY :  As Recursive and Iterative have similar kind of methods in these two test classes, we used DRY(Don't Repeat Yourself) Principle by implementing a OO technique called "Triangulate".In this all the common things between these two classes are moved to a separate class keeping the difference in other two respective classes.
+		 
+2. What design patterns did you use in assignment 3? Discuss.
+
+
+
+
+
+3. What design principles did you use in assignment 4? Discuss.
+
+OCP   : We used OCP (Open Closed Principle) by implementing the code in such a way that, the code doesn't break at any time when a new avatar is added.
+
+YAGNI : Initially we have created the classes for all the avatars which leaded us to the violation of YAGNI principle.Then we just started with the "Bike" class, implemented the transformations and actions on that particular avatar.At the end,all the avatars were implemented similar to the Bike.
+
+4. What design patterns did you use in assignment 4? Discuss?
+
+
+

@@ -1,0 +1,49 @@
+[Venkat 07/19/15 06:28 AM CDT]
+review: move forward
+
+Write a test to assert that the memoized version is significantly better
+in performance than the recursive version.
+
+------------------------------------------------------------------------------
+[Venkat 07/18/15 06:18 AM CDT]
+review: take the next step
+
+See suggestion in code.
+
+------------------------------------------------------------------------------
+[Venkat 07/17/15 08:31 AM CDT]
+review: triangulate to remove duplication
+
+See suggestions in code.
+
+------------------------------------------------------------------------------
+[Venkat 07/16/15 07:32 AM CDT]
+review: honor SRP
+
+Keep tests narrow and focused on one thing.
+
+------------------------------------------------------------------------------
+[Venkat 07/15/15 11:00 AM CDT]
+review: Keep it DRY.
+
+See notes in code.
+
+------------------------------------------------------------------------------
+[Venkat 07/14/15 10:27 AM CDT]
+review: good progress
+
+Move to the next step.
+
+------------------------------------------------------------------------------
+[Venkat 07/13/15 04:58 AM CDT]
+review: check the result for index
+
+Check the index to value, keep it consistent with what's given in assign3.txt.
+
+------------------------------------------------------------------------------
+[Venkat 07/12/15 04:36 AM CDT]
+review: build file?
+
+Did not find build file. You're not running gradle?
+
+------------------------------------------------------------------------------

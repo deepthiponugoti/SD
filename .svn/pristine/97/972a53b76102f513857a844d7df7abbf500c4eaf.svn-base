@@ -1,0 +1,45 @@
+package assign4;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import java.util.Arrays;
+import java.util.List;
+
+import static org.junit.Assert.assertTrue;
+import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.verify;
+
+public class PlayerTest {
+
+    Player player;
+    List<Avatar> listOfAvatars;
+    BikeAvatar bikeAvatar;
+    CarAvatarAdapter carAvatarAdapter;
+
+    @Before
+    public void setUp(){
+        listOfAvatars = Arrays.asList(bikeAvatar, carAvatarAdapter);
+    }
+
+    @Test
+    public void testCanary(){
+        assertTrue(true);
+    }
+
+    @Test
+    public void testForPerformActionOfBike(){
+        BikeAvatar bikeAvatarSpy = spy(new BikeAvatar());
+        player = new Player(listOfAvatars, bikeAvatarSpy);
+        player.performAction();
+        verify(bikeAvatarSpy).performAction();
+    }
+
+    @Test
+    public void testForPerformActionOfCar(){
+        CarAvatarAdapter carAvatarAdapterSpy = spy(new CarAvatarAdapter(new CarAvatar()));
+        player = new Player(listOfAvatars, carAvatarAdapterSpy);
+        player.performAction();
+        verify(carAvatarAdapterSpy).performAction();
+    }
+}

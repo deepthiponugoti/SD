@@ -1,0 +1,73 @@
+package assign4;
+
+import assign4.Player.Direction;
+import org.junit.Before;
+import org.junit.Test;
+
+import java.util.Arrays;
+import java.util.List;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.verify;
+
+public class PlayerTest {
+
+    Player player;
+    List<Avatar> listOfAvatars;
+    Bike bike;
+    Car car;
+
+    @Before
+    public void setUp(){
+        bike = new Bike();
+        car = new Car();
+        listOfAvatars = Arrays.asList(bike, car);
+    }
+
+    @Test
+    public void testCanary(){
+        assertTrue(true);
+    }
+
+    @Test
+    public void testForPerformActionOfBike(){
+        Bike bikeSpy = spy(new Bike());
+        player = new Player(listOfAvatars, bikeSpy); //Venkat: Move to setup
+        player.performAction();
+        verify(bikeSpy).performAction();
+    }
+
+    @Test
+    public void testToTransformFromBikeToCarUsingNext(){
+        player = new Player(listOfAvatars, bike); //Venkat: Move to setup
+        assertEquals(car, player.transform(Direction.valueOf("NEXT")));
+    }
+
+    //Venkat: stay with next, transform twice so car transforms to bike
+    
+    
+    @Test
+    public void testToTransformFromBikeToCarUsingPrevious(){
+        player = new Player(listOfAvatars, bike); //Venkat: Move to setup
+        assertEquals(car, player.transform(Direction.PREVIOUS));
+    }
+
+
+    //Venkat: hard to read. call transform twice to achieve this.
+    @Test
+    public void testToTransformFromCarToBikeUsingPrevious(){
+        player = new Player(listOfAvatars, car);
+        Direction direction[] = Direction.values();
+        assertEquals(bike, player.transform(direction[0]));
+    }
+
+    //Venkat: Remove this test, no value
+    @Test
+    public void testToTransformFromCarToBikeUsingNext(){
+        player = new Player(listOfAvatars, car);
+        player.performAction();
+        assertEquals(bike, player.transform(Direction.NEXT));
+    }
+}

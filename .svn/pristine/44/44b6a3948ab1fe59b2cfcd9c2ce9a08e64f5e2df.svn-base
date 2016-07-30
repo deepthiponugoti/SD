@@ -1,0 +1,15 @@
+package assign4;
+
+//Venkat: YAGNI, remove
+public class CarAvatarAdapter implements Avatar{
+    CarAvatar carAvatar;
+
+    public CarAvatarAdapter(CarAvatar theCarAvatar){
+        carAvatar = theCarAvatar;
+    }
+
+    @Override
+    public void performAction() {
+        carAvatar.driveFast();
+    }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="assign4.AvatarFactoryTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2015-08-08T03:40:12" hostname="Deeps" time="0.05">
+  <properties/>
+  <testcase name="checkForTheUnknownAvatarNameFromTheFile" classname="assign4.AvatarFactoryTest" time="0.008"/>
+  <testcase name="checkForThegenerationOfListOfAvatarsObjectFromFile" classname="assign4.AvatarFactoryTest" time="0.032"/>
+  <testcase name="checkForTheListOfAvatarsIfFileNameIsInvalid" classname="assign4.AvatarFactoryTest" time="0.001"/>
+  <testcase name="checkForCarObject" classname="assign4.AvatarFactoryTest" time="0.0"/>
+  <testcase name="checkForTheListOfAvatarsObjectFromAnotherFileWhereOneNameIsInvalid" classname="assign4.AvatarFactoryTest" time="0.002"/>
+  <testcase name="testCanary" classname="assign4.AvatarFactoryTest" time="0.0"/>
+  <testcase name="checkForBikeObject" classname="assign4.AvatarFactoryTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

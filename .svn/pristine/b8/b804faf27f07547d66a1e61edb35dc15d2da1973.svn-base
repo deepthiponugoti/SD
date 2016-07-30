@@ -1,0 +1,20 @@
+package assign4;
+
+import java.util.List;
+
+public class TransformAvatar {
+
+    public String transform(List<Avatar> listOfAvatars, String currentState, String stateToBeTransformed) {
+
+        for(Avatar avatar : listOfAvatars) {
+            if (avatar.getName().equals(currentState)) {
+                if (stateToBeTransformed.equals("BACKWARD"))
+                    return avatar.getPreviousAvatar().getName();
+
+                else return avatar.getNextAvatar().getName();
+            }
+        }
+
+        return "Invalid Avatar";
+    }
+}

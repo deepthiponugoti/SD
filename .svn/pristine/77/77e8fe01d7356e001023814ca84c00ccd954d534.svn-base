@@ -1,0 +1,81 @@
+package assign4;
+
+import assign4.Player.Direction;
+import org.junit.Before;
+import org.junit.Test;
+
+import java.util.Arrays;
+import java.util.List;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.verify;
+
+public class PlayerTest {
+
+    Player player;
+    List<Avatar> listOfAvatars;
+    Bike bike;
+    Car car;
+    Plane plane;
+    Rocket rocket;
+    Bike  bikeSpy;
+
+    @Before
+    public void setUp(){
+        bike = new Bike();
+        car = new Car();
+        plane = new Plane();
+        rocket = new Rocket();
+        listOfAvatars = Arrays.asList(bike, car, plane, rocket);
+        player = new Player(listOfAvatars, bike);
+    }
+
+    @Test
+    public void testCanary(){
+        assertTrue(true);
+    }
+
+    @Test
+    public void testForPerformActionOfBike(){
+        bikeSpy = spy(new Bike());
+        player = new Player(listOfAvatars, bikeSpy);
+        player.performAction();
+        verify(bikeSpy).performAction();
+    }
+
+    @Test
+    public void testToTransformFromBikeToCarUsingNext(){
+
+         player.transform(Direction.valueOf("NEXT"));
+        assertEquals(car, player.getCurrentAvatar());
+    }
+
+    @Test
+    public void testToTransformFromBikeToRocketUsingPrevious(){
+
+         player.transform(Direction.PREVIOUS);
+        assertEquals(rocket, player.getCurrentAvatar());
+    }
+
+    @Test
+    public void testToTransformFromBikeToPlaneUsingPrevious(){
+
+        Direction direction[] = Direction.values();
+        player.transform(direction[0]);
+        player.transform(direction[0]);
+        assertEquals(plane, player.getCurrentAvatar());
+    }
+
+    @Test
+    public void testToTransformFromBikeToPlaneUsingNext(){
+
+        Direction direction[] = Direction.values();
+        player.transform(direction[1]);
+        player.transform(direction[1]);
+        assertEquals(plane, player.getCurrentAvatar());
+    }
+
+}
+

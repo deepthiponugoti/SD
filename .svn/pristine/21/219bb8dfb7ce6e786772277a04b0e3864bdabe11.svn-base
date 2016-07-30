@@ -1,0 +1,33 @@
+package assign4;
+
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+public class PlayerTest {
+
+    Player player;
+    Avatar avatar; //Venkat: Remove
+
+    @Test
+    public void testCanary(){
+        assertTrue(true);
+    }
+
+    @Test
+    public void testForPerformActionOfBike(){
+        avatar = new Bike();
+        player = new Player(avatar);
+        assertEquals("Drive through narrow lanes", player.getAvatar().performAction());
+        //Venkat: Here ensure that when performAction is called on the player, it in turn calls the performAction on the Bike.
+    }
+
+//Venkat: Remove
+    @Test
+    public void testForDefaultActionOfAvatar(){
+        avatar = new Avatar();
+        player = new Player(avatar);
+        assertEquals("default action", player.getAvatar().performAction());
+    }
+}

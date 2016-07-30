@@ -1,0 +1,122 @@
+[Venkat 06/26/15 10:06 AM CEST]
+review: You're done
+
+Nice
+
+Don't leave comments in code, if you have a question or can't figure out
+drop an email.
+
+------------------------------------------------------------------------------
+[Venkat 06/25/15 06:23 AM CEST]
+review: very nice work, almost done.
+
+Nice work on the GUI. Let's refactor just a bit to reduce code.
+Returning null is a smell, let's fix that too.
+
+------------------------------------------------------------------------------
+[Venkat 06/24/15 07:59 AM CEST]
+review: nice work so far
+
+Slow down the animation to once a second so the user can actually see
+the evolution.
+
+Let the user provide the size of the grid.
+Refactor long method. Reduce code.
+
+------------------------------------------------------------------------------
+[Venkat 06/23/15 07:18 AM CEST]
+review: yay
+
+Run gradle, notice warning. Fix warning (don't suppress it).
+
+Move the GUI to assign1.ui package (and to assign1/ui folder).
+Fix build file accordingly to run GUI.
+
+Nice modular code in the GUI, good job here.
+
+------------------------------------------------------------------------------
+[Venkat 06/22/15 02:33 AM MDT]
+review: Nice progress
+
+Move to the next step.
+
+------------------------------------------------------------------------------
+[Venkat 06/21/15 05:03 AM MDT]
+review: good progress
+
+Good work so far. Continue along with the class being designed.
+
+------------------------------------------------------------------------------
+[Venkat 06/20/15 05:34 AM MDT]
+review: nice progress
+
+Nice expressive tests.
+
+Proceed to next set of tests.
+
+------------------------------------------------------------------------------
+[Venkat 06/19/15 18:14 PM MDT]
+review: rework some tests
+
+reworks some tests to sample data instead of testing all possible values.
+
+refactor to reduce smell in code, by modularizing. See suggestion in code.
+
+------------------------------------------------------------------------------
+[Venkat 06/19/15 09:36 AM CEST]
+review: nice work so far
+
+Nice work, refactor to reduce state - see suggestions in code.
+
+GameRules: Too much code, the above suggestion will reduce quite a bit
+of code here.
+
+------------------------------------------------------------------------------
+[Venkat 06/18/15 04:28 AM CEST]
+review: nice work, continue further
+
+TestGameRules:
+Good progress here, continue with more tests here with the current focus.
+Then think of the next few tests to write and write one or two more.
+
+------------------------------------------------------------------------------
+[Venkat 06/17/15 04:20 AM CEST]
+review: nice progress
+
+TestGameRules:
+Very nice work here.
+Proceed to write more tests.
+
+GameRules:
+Good so far.
+
+------------------------------------------------------------------------------
+[Venkat 06/16/15 04:14 AM CEST]
+review: reduce code, don't introduce state unless it is really needed
+
+TestGameRules:
+Let's reduce some noise in the tests. See suggestions in code.
+
+GameRules:
+Too much code. We should have minimum code to make tests pass.
+Delete all the code in this class. Start with the newly suggested
+tests and write minimum code for it.
+
+------------------------------------------------------------------------------
+[Venkat 06/15/15 08:28 AM CEST]
+review: Nice start
+
+Nice start, with small steps-test and code.
+
+Focus on behavior instead of state. Let the state fall in place to 
+serve the behaivor. Don't write tests for getters and setters,
+think of something interesting and very useful to create first.
+
+See my comments in the source file.
+
+I've created a build file to run the tests from the command prompt.
+Type gradle to run the tests and make sure all tests are passing before
+checking in any code change. You need to download Gradle from http://www.gradle.org
+and set the path to it before you can run gradle.
+
+------------------------------------------------------------------------------

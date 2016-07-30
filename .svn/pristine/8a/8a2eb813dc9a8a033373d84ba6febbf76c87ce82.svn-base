@@ -1,0 +1,49 @@
+HW2: Due 11:59PM June 15
+
+Create a strategic design for a modified version of the Game Of Life:
+<http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life>
+
+At the start of the program, the user will provide the following details:
+- size of the square grid
+- the location of each live cell
+
+The program will display all the cells, live and dead. It will show animation of the birth and death of cells, until the user quits the program.
+
+Assume the grid is fixed size and the program has to show only the state of cells within the given bounds.
+
+1. Show diagrams to illustrate the major design ideas.
+Check in file(s) in the pdf, jpg, png,.. format. You may use a tool to create
+the diagram or hand draw and take a picture.
+
+Please find ClassDiagram.JPG file in the current folder.
+
+2. Discuss the design ideas, the key parts, their responsibilities...
+
+Our strategic design idea consists of four classes namely "GameOfLife", "TwoDGrid", "GridCanvas" and "Cell". The responsibilities of each class are as follows:
+
+Cell class generates a cell by accepting the x and y coordinates and a boolean value saving the state of the cell whether it is dead or alive.
+
+TwoDGrid class generates the two dimensional grid of cells and is responsible for changing the state of the cells based on the number of live neighbours. It also displays the grid. 
+
+GridCanvas class accepts the input pattern from the keyboard and initializes the grid. It paints the cell.
+
+GameOfLife class performs the start and stop operations of the game. It is responsible for setting the next generation of the game and passing the current grid as input to next generation.
+
+Our design idea is : The program starts with the GameOfLife class which creates the TwoDGrid object using the Cell objects and then the program asks for user input to enter which calls the GridCanvas object and initializes the grid. TwoDgrid applies the major rules for the grid and changes the state of the cells.  Finally, after all the changes to all the cells, GameOfLife class passes the grid to next generation.
+
+3. What language do you plan to use for this program? What libraries do you plan to use?
+
+We are planning to use Java for this program because we both are more comfortable with it than any other languages and we have worked on it before.
+
+To create the GUI, we are planning to use JavaFx or swing library for this program. 
+
+<<<<<<< .mine
+JavaFx is the newer version where as swing is an older version. We can work on applications using both the libraries but using JavaFx will make things easier than swing. Animations are easier in JavaFx when compared to swing. So, in our program, using JavaFx may favour us.=======
+JavaFx is the newer version where as swing is an older version. We can work on applications using both the libraries but using JavaFx will make things easier than swing. Animations are easier in JavaFx when compared to swing. So, in our program, using JavaFx may favour us.
+>>>>>>> .r323
+
+Total [10]: 10
+Do not check in merge conflicts with <<< .mine. 
+Do svn up, then edit, and check in right away to avoid merge conflicts.
+If there is a conflict, resolve it propertly and don't leave .mine in the checked in
+file.

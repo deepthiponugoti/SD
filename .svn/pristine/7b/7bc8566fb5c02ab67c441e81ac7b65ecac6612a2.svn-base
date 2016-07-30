@@ -1,0 +1,6 @@
+package assign4;
+
+public class CarAvatar{
+    public void driveFast(){
+    }
+}

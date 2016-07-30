@@ -1,0 +1,49 @@
+package assign3;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
+public class FibonacciNumbersIterationTest extends FibonacciBaseClassTest {
+
+//Venkat: Remove everything from this class and then
+//override the callGetValue method from the base, in that method make use of the getFibonacciNumbers method of the base and do what is the 
+//main focus on this class.
+        FibonacciNumbers fibonacciNumbers;
+
+        @Override
+        public int fibonacciSeries(int position){
+            return fibonacciNumbers.getValueIterative(position);
+        }
+
+        @Before
+        public void setUp() {
+            fibonacciNumbers = new FibonacciNumbers();
+        }
+
+        @Test
+        public void checkForTheZerothPositionOfTheSeriesForIterationFibonacci(){
+            assertEquals(1, fibonacciSeries(0));
+        }
+
+        @Test
+        public void checkForTheFirstPositionOfTheSeriesForIterationFibonacci(){
+            assertEquals(1, fibonacciSeries(1));
+        }
+
+        @Test
+        public void checkForTheFourthPositionOfTheSeriesForIterationFibonacci(){
+            assertEquals(5, fibonacciSeries(4));
+        }
+
+        @Test
+        public void checkForTheSixthPositionOfTheSeriesForIterationFibonacci(){
+            assertEquals(13, fibonacciSeries(6));
+        }
+    }
+
+
+
+
+

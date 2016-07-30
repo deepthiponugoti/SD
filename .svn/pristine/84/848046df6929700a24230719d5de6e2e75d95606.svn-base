@@ -1,0 +1,34 @@
+package assign4;
+
+public class Avatar { //Venkat: Make this an interface
+    private Avatar nextAvatar; //Venkat: Remove
+    private Avatar previousAvatar; //Venkat: Remove
+
+    public enum Direction {PREVIOUS, NEXT}; //Venkat: Remove
+
+    public void setAvatars(Avatar thePreviousAvatar, Avatar theNextAvatar){ //Venkat: Remove
+        previousAvatar = thePreviousAvatar;
+        nextAvatar = theNextAvatar;
+    }
+
+    //Venkat: Remove
+    public Avatar getPreviousAvatar() {
+        return previousAvatar;
+    }
+
+    //Venkat: Remove
+    public Avatar getNextAvatar() {
+        return nextAvatar;
+    }
+
+//Venkat: Remove
+    public Avatar transform(Direction stateToBeTransformed) {
+
+        return stateToBeTransformed.equals(Direction.PREVIOUS) ? getPreviousAvatar() : getNextAvatar();
+    }
+
+//Venkat: make this a void method
+    public String performAction(){
+        return "default action";
+    }
+}

@@ -1,0 +1,39 @@
+HW3: Due 11:59PM August 14th
+
+What design principles did you use in assignment 3? Discuss.
+
+1. In assignment 3 mainly two design principles were used :
+
+a)SRP :  We honoured SRP (Single Responsibility Principle) by implementing two different test classes as both the tests for iterative and recursion do exactly the same, except on two different methods. //Venkat: Here, the focus is single responsibility, so the discussion is about why we separated the tests.
+
+b)DRY :  As Recursive and Iterative have similar kind of methods in these two test classes, we used [//Venkat: the] DRY (Don't Repeat Yourself) Principle by implementing a OO technique called "Triangulate." In this all the common things between these two classes are moved to a separate class keeping the difference in other two respective classes.
+		 
+c)DIP : In the process of triangulation DIP Principle was honoured so that all the three Fibonacci methods extended from one abstract class and depends on it. //Venkat: There is inheritance, but where is the inversion to make this DIP?
+
+//Venkat: Is there anything about minimalism that has come into play?
+
+2. What design patterns did you use in assignment 3? Discuss.
+
+a) Cascade Method Pattern : By using this pattern we have implemented getValueIterative method in such way that it is very fluent and has less number of noise in it. 
+
+3. What design principles did you use in assignment 4? Discuss.
+
+a)OCP   : We used OCP (Open Closed Principle) by implementing the code in such a way that, the code doesn't break at any time when a new avatar is added.
+
+b)YAGNI : Initially we have created the classes for all the avatars which lead us to the violation of YAGNI principle. Then we just started with the "Bike" class, implemented the transformations and actions on that particular avatar. At the end, all the avatars were implemented similar to the Bike.
+		
+
+
+4. What design patterns did you use in assignment 4? Discuss?
+
+a) Cascade Method Pattern   : We have removed some noise in AvatarFactory class by implementing functional style of programming in "generateListOfAvatarsFromTheFile" method.
+
+b) Abstract Factory Pattern : Used Abstract Factory Pattern and extended all the families of products (here avatars) from one abstract class without violating OCP.
+
+c) Singleton Pattern        : In the beginning of the design process we have used single instance with the help of "enum" for performing transformations of avatars.
+
+
+
+
+
+

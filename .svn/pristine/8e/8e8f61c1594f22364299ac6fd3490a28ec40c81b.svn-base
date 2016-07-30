@@ -1,0 +1,51 @@
+Files you check in outside of specific homework or assignment directory will not be reviewed or graded for that homework/assignment.
+
+Check in and modify files as many times as you like. You will not be able to modify the files after the deadline.
+
+You will work as a pair, both of you are responsible for the completed work in all assignments and homework. Each of you are expected to put in your reasonable share of effort into it.
+
+The deadlines are strict, there will be no extensions. Don't email any code to Venkat.
+Your last check in before the deadline will be graded. So, if you break the code (in assignments) before the deadline, you will lose.
+
+Please feel free to ask for frequent reviews (see the reviews/readme.txt file for details on how to ask for reviews).
+
+You can evolve the answers and solutions based on the reviews to your pair and to 
+other pairs in the course. Only the latest checkin at the time of review will be 
+looked at. Also the final check in will be the only one graded.
+
+Please read the academic honesty policy posted on the course mailing list.
+
+Now to homework #1.
+
+------------------------------------------------------------------------------
+HW1: Due 11:59PM June 10
+
+Please refer to Martin Fowler's article "Who Needs an Architect?" at 
+<http://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf>
+
+1. According to the article, what's architecture?
+
+In the beginning of the article, Martin Fowler described architecture as a word which seems of great importance when discussing about the design.
+
+Later, based on a posting in Extreme Programming mailing list which described architecture as "the highest level concept of a system in its environment. The architecture of a software system (at a given point in time) is its organization or structure of significant components interacting through interfaces, those components being composed of successively smaller components and interfaces." 
+Johnson responded for this and quoted that only the developers understanding is responsible for the development of the architecture.
+
+So, the definition is modified to "the shared understanding of the developers on the project".
+
+Another definition says that, architecture is a set of decisions which must be made in the early stages of the project. This is because developers include only the important parts of the project in the architecture. So, they think these important things should not go wrong later on in the further stages.
+
+So the definition can be modified as, architecture is something which is difficult to accept the change.
+
+2. According to the article, what's the role of an architect?
+
+The role of a good architect must interact with all the categories of the team and get the feedback from them and should make the decisions from them. He should mentor the development team so that they can handle the complex issues by themselves.
+
+Another important role of an architect is to make the architecture adaptable to changes by eliminating irreversibility.
+
+3. In your experience and/or observation, how does an architect in organizations differ from the one described in the article?
+
+The architect from our experience takes his own decisions and creates the design. However, he does not work with any of the developers or other team members. He is completely independent with the team.
+The developers gather the information from the architect later on and try to code the work and evolve the design. 
+In the article, there are basically two types of architects in which the most common architect described in the article is the one we faced in our experience.
+
+Total [10]: 10

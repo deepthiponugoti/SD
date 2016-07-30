@@ -1,0 +1,13 @@
+package assign4;
+
+public class Player {
+    private Avatar avatar;
+
+    public Player(Avatar theAvatar){
+        avatar = theAvatar;
+    }
+
+    public Avatar getAvatar(){
+        return avatar;
+    }
+}

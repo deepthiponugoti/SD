@@ -1,0 +1,50 @@
+HW4 Due 11:59PM August 14th
+
+***There will be no reviews for this Homework***
+
+Write your answer in this file. No extra files will be graded.
+Give a collective answer as a pair, however, where needed, feel free to mention something specific to one person.
+
+1. What did you essentially learn in this course about design?
+
+Design plays a very important role in the software development. Quality of the software varies highly due to the design. Many aspects like time, cost are greatly influenced by the design. We learnt that it is very difficult to design right at the first time. Design evolves during the development of the software application.
+
+We also found that initially whatever we planned in our strategic design may contain many unnecessary parts and the design evolves as we develop the application.
+
+Design is not just only about the uml diagrams but there are several metrics to measure the quality of design like design principles and patterns that are very useful in software development.
+
+One of the important thing we have learned in this course is TDD(Test Driven Development). Everything we design or code must be test driven. We learnt the importance of TDD slowly as we went through different assignments.
+
+
+2. When asked to design a software application, how would you approach it?
+
+1) First, we will implement a strategic design so that we can get a basic idea about the features of the application.
+
+2) Then we take a simple feature which has no dependencies and focuses the core behaviour of the application and try to write a failing test case for it. Later, write minimal code for the test case to pass by following design principles like SRP, SLAP, YAGNI, DRY  etc.
+
+3) We will make sure about having good variable names, avoiding long methods and also follow DRY principle.
+
+4) We ensure that we get 100% code coverage for all the code we wrote. This feedback loop help us in the future know where the issue is if there are any changes made to the code.
+ 
+5) Next by following the OCP principle, we will try to provide extensibility to our design so that if in future any new things arrive then the cost of adding them or changing the existing design will be minimal.
+
+6) During this process, we will analyze if our problem suits any one of the design patterns and apply it if it suits our requirements or provide extensibility to our design.
+
+
+3. What are some of the general guidelines you would follow when designing?
+
+Guidelines:
+
+1) Low coupling and high cohesion between methods.
+
+2) Test Driven Development (Every part of the code should be tested).
+
+3) Getting 100% code coverage to the code we developed so that we can get quick feedback loop in the future.
+
+4) Good Variable names and method names so that it improves readability of the code.
+
+5) Follow the design principles and patterns wherever it is necessary.
+
+
+
+

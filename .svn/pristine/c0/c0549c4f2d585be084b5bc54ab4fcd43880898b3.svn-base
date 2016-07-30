@@ -1,0 +1,29 @@
+package assign4.driver;
+
+import assign4.Avatar;
+import assign4.AvatarFactory;
+import assign4.Player;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class AvatarDriver {
+    public static void main(String args[]) throws IOException, IllegalAccessException, InstantiationException, ClassNotFoundException {
+        List<Avatar> listOfAvatars = new ArrayList<>();
+        BufferedReader br = new BufferedReader(new FileReader("listOfAvatars.txt")); //Venkat: Should not be done here, move to code that can be test driven.
+        String avatarName;
+        AvatarFactory avatarFactory = new AvatarFactory();
+
+        while((avatarName = br.readLine()) != null){ //Venkat: Too much code in main that is not test driven.
+            Avatar avatarObject = avatarFactory.getAvatarObjectForString(avatarName);
+            listOfAvatars.add(avatarObject);
+        }
+
+        Player player = new Player(listOfAvatars, listOfAvatars.get(0));
+        player.transformNext();
+        player.performAction();
+    }
+}

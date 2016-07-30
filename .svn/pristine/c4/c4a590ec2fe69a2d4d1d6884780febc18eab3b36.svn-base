@@ -1,0 +1,42 @@
+package assign3;
+
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
+public class FibonacciNumbersMemoizedTest extends FibonacciNumbersTest {
+
+    @Override
+    public int callGetValue(int position) {
+        return getFibonacciNumbers().getValueMemoized(position);
+    }
+
+    @Test
+    public void checkForTheSpeedOfMemoizedVersionIfValueIsAlreadyComputed(){
+
+        callGetValue(39); //Venkat: Remove
+        callGetValue(38); //Venkat: Remove
+
+        //Venkat: From here...
+        long memoizedStartTime = System.nanoTime();
+        callGetValue(40);
+        long memoizedEndTime = System.nanoTime();
+
+        long recursiveStartTime = System.nanoTime();
+        getFibonacciNumbers().getValueRecursive(40);
+        long recursiveEndTime = System.nanoTime();
+        //Venkat: ... to here is quite a bit of duplication. Change to
+        //long recursiveTime = computeTime(() -> getFibonacciNumbers().getValueRecursive(40));
+        //long memoizedTime = computeTime(() -> getFibonacciNumbers().getValueMemoized(40));
+        //assert... recursiveEndTime > memoizedTime * 10;
+        boolean isGreater = (memoizedEndTime - memoizedStartTime) < (recursiveEndTime - recursiveStartTime);
+
+        assertEquals(true, isGreater);
+    }
+    
+    //Venkat: Write private long computeTime(Runnable code) {
+    // ...
+    // code.run();
+    //...
+    // return ... time difference ...
+}

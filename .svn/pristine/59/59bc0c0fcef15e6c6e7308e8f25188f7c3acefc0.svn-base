@@ -1,0 +1,24 @@
+[Venkat 08/08/15 06:37 AM CDT]
+review: good progress
+
+1. see suggestions.
+
+2. 
+Good pattern. Related to that, there is also another pattern exactly at the
+same place. What about other patterns elsewhere in the code/design.
+
+3. Any other principle used here?
+
+4. 
+(c) This is just an enum, not a singleton.
+
+------------------------------------------------------------------------------
+[Venkat 08/07/15 08:30 AM MDT]
+review: good so far
+
+1. Good, are there more. Visit code closely to see.
+
+3. Give one space after period that ends each sentence.
+Give one space after comma.
+
+------------------------------------------------------------------------------

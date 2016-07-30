@@ -1,0 +1,15 @@
+package assign3;
+
+import org.junit.Before;
+
+public class FibonacciBaseClassTest {
+
+    FibonacciNumbers fibonacciNumbers;
+
+    @Before
+    public void setUp() {
+        fibonacciNumbers = new FibonacciNumbers();
+    }
+
+}
+

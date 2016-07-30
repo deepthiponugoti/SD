@@ -1,0 +1,19 @@
+package assign3;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
+public class FibonacciBaseClassTest {
+
+    FibonnacciNumbers fibonacciNumbers;
+
+
+    @Before
+    public void setUp() {
+        fibonacciNumbers = new FibonnacciNumbers();
+    }
+
+}
+

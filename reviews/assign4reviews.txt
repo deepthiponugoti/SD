@@ -1,0 +1,96 @@
+[Venkat 08/06/15 07:29 AM CDT]
+review: good progress
+
+A few things to improve.
+
+------------------------------------------------------------------------------
+[Venkat 08/05/15 07:41 AM CDT]
+review: Continue to test drive
+
+Too much code in main that is not test driven. Continue to design with tests.
+Call main from gradle.
+
+------------------------------------------------------------------------------
+[Venkat 08/04/15 05:33 AM MDT]
+review: Fix and move forward
+
+Move to the next step. Provide a way to create a different sequence each time the program is run, but without having to change the code.
+
+------------------------------------------------------------------------------
+[Venkat 08/03/15 05:50 AM MDT]
+review: red in coverage report
+
+Red in coverage report.
+We discussed quite a few times on the mailing list how to avoid this.
+We really don't need any of the avatars other than Bike at this time.
+See the mails on this topic on the mailing list.
+
+------------------------------------------------------------------------------
+[Venkat 08/02/15 06:35 AM CDT]
+review: Remove unnecessary code, make code expressive
+
+See suggestions.
+
+------------------------------------------------------------------------------
+[Venkat 08/01/15 05:55 AM CDT]
+review: nice progress
+
+Refactor, move forward.
+
+------------------------------------------------------------------------------
+[Venkat 07/31/15 07:18 AM CDT]
+review: YAGNI
+
+Rework based on suggestions.
+
+------------------------------------------------------------------------------
+[Venkat 07/30/15 06:33 AM CDT]
+review: good, move forward
+
+Fix and move forward, write one or two more tests.
+
+------------------------------------------------------------------------------
+[Venkat 07/29/15 10:16 AM CDT]
+review: take small steps.
+
+Let's get one thing gone before jumping to the next.
+
+------------------------------------------------------------------------------
+[Venkat 07/28/15 09:31 AM CDT]
+review: refocus for to design a core knowledge
+
+See suggestion in code.
+
+------------------------------------------------------------------------------
+[Venkat 07/27/15 05:15 AM MDT]
+review: simplify the interface
+
+Reduce parameters. This will reduce burden on the user and also reduce
+user errors.
+
+------------------------------------------------------------------------------
+[Venkat 07/26/15 18:31 PM MDT]
+review: consider not storing the form as a string
+
+Heading in a good direction. However, consider not storing the form as a string 
+(consider not storing it at all).
+
+Simply tests, sign of design not being focused on the problem.
+
+------------------------------------------------------------------------------
+[Venkat 07/25/15 05:34 AM MDT]
+review: good start
+
+TransformAvatarTest:
+
+The first test method is so long I gave up about 25% into reading the name.
+Make that concise and clear.
+
+Ah, -1, that is not very intuitive. Let's change that to more explicitly convey the intent.
+
+Also, would it be possible to design so that the last test would not be needed?
+
+TransformAvatar:
+Reduce code, a lot. 
+
+------------------------------------------------------------------------------

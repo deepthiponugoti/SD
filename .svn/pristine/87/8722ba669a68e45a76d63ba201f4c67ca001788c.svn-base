@@ -1,0 +1,17 @@
+package assign4.driver;
+
+import java.io.IOException;
+import java.util.List;
+
+public class AvatarDriver {
+    public static void main(String args[]) throws IOException, IllegalAccessException, InstantiationException, ClassNotFoundException {
+
+        AvatarFactory avatarFactory = new AvatarFactory();
+        List<Avatar> listOfAvatars = avatarFactory.FileCreation();
+        Player player = new Player(listOfAvatars, listOfAvatars.get(0));
+        player.transformNext();
+        System.out.println("Calling performAction on "+ listOfAvatars.get(0).getClass());
+        player.performAction();
+    }
+}
+

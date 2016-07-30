@@ -1,0 +1,26 @@
+package assign4;
+
+public class Avatar {
+    private Avatar nextAvatar;
+    private Avatar previousAvatar;
+
+    public enum Direction {PREVIOUS, NEXT};
+
+    public void setAvatars(Avatar thePreviousAvatar, Avatar theNextAvatar){
+        previousAvatar = thePreviousAvatar;
+        nextAvatar = theNextAvatar;
+    }
+
+    public Avatar getPreviousAvatar() {
+        return previousAvatar;
+    }
+
+    public Avatar getNextAvatar() {
+        return nextAvatar;
+    }
+
+    public Avatar transform(Direction stateToBeTransformed) {
+
+        return stateToBeTransformed.equals(Direction.PREVIOUS) ? getPreviousAvatar() : getNextAvatar();
+    }
+}

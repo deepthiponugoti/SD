@@ -1,0 +1,37 @@
+package assign4;
+
+import java.util.List;
+
+public class Player {
+    private List<Avatar> avatars;
+    private Avatar currentAvatar;
+
+    public enum Direction {PREVIOUS, NEXT};
+
+    public Avatar getCurrentAvatar(){
+        return currentAvatar;
+    }
+
+    public Player(List<Avatar> theAvatars, Avatar theCurrentAvatar) {
+        avatars = theAvatars;
+        currentAvatar = theCurrentAvatar;
+    }
+
+    public void performAction() {
+
+        currentAvatar.performAction();
+    }
+
+    public void transform(Direction direction) {
+        int currentPosition = avatars.indexOf(currentAvatar);
+        int indexToBeTransformed;
+
+        if (direction.equals(Direction.NEXT)) {
+            indexToBeTransformed = currentPosition + 1 == avatars.size() ? 0 : currentPosition + 1;
+        } else {
+            indexToBeTransformed = currentPosition - 1 == -1 ? avatars.size() - 1 : currentPosition - 1;
+        }
+
+        currentAvatar = avatars.get(indexToBeTransformed);
+    }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="assign4.PlayerTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2015-08-08T03:40:12" hostname="Deeps" time="0.521">
+  <properties/>
+  <testcase name="testToPerformActionOfPlane" classname="assign4.PlayerTest" time="0.446"/>
+  <testcase name="testToTransformFromBikeOneToBikeThreeUsingPrevious" classname="assign4.PlayerTest" time="0.0"/>
+  <testcase name="testToTransformFromBikeOneToBikeTwoUsingNext" classname="assign4.PlayerTest" time="0.001"/>
+  <testcase name="testToTransformFromBikeOneToBikeOneUsingNext" classname="assign4.PlayerTest" time="0.0"/>
+  <testcase name="testToPerformActionOfBike" classname="assign4.PlayerTest" time="0.02"/>
+  <testcase name="testCanary" classname="assign4.PlayerTest" time="0.0"/>
+  <testcase name="testToPerformActionOfRocket" classname="assign4.PlayerTest" time="0.033"/>
+  <testcase name="testToTransformFromBikeOneToBikeOneUsingPrevious" classname="assign4.PlayerTest" time="0.0"/>
+  <testcase name="testToPerformActionOfCar" classname="assign4.PlayerTest" time="0.018"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

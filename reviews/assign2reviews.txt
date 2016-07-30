@@ -1,0 +1,108 @@
+[Venkat 07/10/15 05:52 AM CDT]
+review: You're done
+
+Take a look at the coverage. Remove driver from coverage.
+
+A few minor refactoring suggestions.
+
+Fix those and you're done.
+
+------------------------------------------------------------------------------
+[Venkat 07/09/15 07:50 AM CDT]
+review: nice progress
+
+Almost there. Write a driver program (with main) that reads a file of ISBN
+numbers, prints the desired result. In the file include some valid isbn and 
+a few invalid isbn numbers.
+
+------------------------------------------------------------------------------
+[Venkat 07/08/15 07:53 AM PDT]
+review: good progress
+
+Refactor and move forward.
+
+------------------------------------------------------------------------------
+[Venkat 07/07/15 04:24 AM PDT]
+review: nice progress
+
+Nice progress. Refactor and move forward.
+
+Move forward to the next step.
+
+------------------------------------------------------------------------------
+[Venkat 07/06/15 06:24 AM PDT]
+review: Return result or error, don't log.
+
+Fix coverage report or ask for help.
+The problem does not ask for logging, don't log.
+See suggestion in code.
+
+------------------------------------------------------------------------------
+[Venkat 07/05/15 10:00 AM PDT]
+review: design for clarity
+
+Design so the receiver clearly knows when they receive a valid data and when
+they receive an error detail.
+
+------------------------------------------------------------------------------
+[Venkat 07/04/15 22:24 PM PDT]
+review: Let's address some design issues
+
+Let's address a design concern. We want the method to give us error detail instead
+of throwing. This will help simplify the higher level method.
+
+------------------------------------------------------------------------------
+[Venkat 07/04/15 06:17 AM PDT]
+review: let's rethink the steps.
+
+Remove code not covered by tests (red in code coverage report).
+
+Let's rethink the next steps.
+
+------------------------------------------------------------------------------
+[Venkat 07/03/15 07:50 AM PDT]
+review: nice progress, refactor and move forward
+
+nice progress. We can reduce a bit, refactor and move forward.
+
+------------------------------------------------------------------------------
+[Venkat 07/02/15 04:19 AM PDT]
+review: nice tests
+
+Refactor and move forward. See suggestions in code.
+
+------------------------------------------------------------------------------
+[Venkat 07/01/15 05:52 AM PDT]
+review: Revisit the design
+
+Fix red in code coverage report.
+The test is doing logic, remove that and rework on the data structure to
+support duplication of titles.
+
+------------------------------------------------------------------------------
+[Venkat 06/30/15 04:59 AM PDT]
+review: good direction
+
+Include coverage report (see assign1 build file).
+
+Good direction.
+
+Nice tests, it gives insight into the data structure. Let's take a look
+at what it tells us.
+
+------------------------------------------------------------------------------
+[Venkat 06/29/15 05:46 AM PDT]
+review: focus on behavior than state
+
+Don't focus on state (don't start with get or set). Instead think of core
+behavior first, what would we do if data was already available.
+
+------------------------------------------------------------------------------
+[Venkat 06/28/15 06:36 AM MDT]
+review: Create a build file
+
+Need a build file to compile and run tests.
+
+Focus on core behavior, bring in dependencies much later.
+
+------------------------------------------------------------------------------

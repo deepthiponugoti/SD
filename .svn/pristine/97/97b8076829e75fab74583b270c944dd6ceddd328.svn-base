@@ -1,0 +1,17 @@
+package assign4;
+
+import java.util.List;
+
+public class Player {
+    private List<Avatar> avatars;
+    private Avatar currentAvatar;
+
+    public Player(List<Avatar> theAvatars, Avatar theCurrentAvatar){
+        avatars = theAvatars;
+        currentAvatar = theCurrentAvatar;
+    }
+
+    public void performAction(){
+        currentAvatar.performAction();
+    }
+}

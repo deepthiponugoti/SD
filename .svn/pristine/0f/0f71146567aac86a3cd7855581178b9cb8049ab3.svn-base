@@ -1,0 +1,26 @@
+package assign4;
+
+import java.util.List;
+
+public class TransformAvatar {
+
+    public String transform(List<String> listOfForms, String currentState, int stateToBeTransformed){
+        int currentPosition;
+
+        for(currentPosition = 0; currentPosition < listOfForms.size(); currentPosition++){
+            if(listOfForms.get(currentPosition).equals(currentState))
+                break;
+        }
+
+        if(currentPosition == listOfForms.size())
+            throw new RuntimeException("Invalid Current State");
+
+        if(currentPosition + stateToBeTransformed == listOfForms.size())
+            return listOfForms.get(0);
+
+        if(currentPosition + stateToBeTransformed < 0)
+            return listOfForms.get(listOfForms.size() - 1);
+
+        return listOfForms.get(currentPosition + stateToBeTransformed);
+    }
+}

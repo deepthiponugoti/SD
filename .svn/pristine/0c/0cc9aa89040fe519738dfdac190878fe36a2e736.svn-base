@@ -1,0 +1,74 @@
+package assign4;
+
+import assign4.Player.Direction;
+import org.junit.Before;
+import org.junit.Test;
+
+import java.util.Arrays;
+import java.util.List;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.verify;
+
+public class PlayerTest {
+
+    Player player;
+    List<Avatar> listOfAvatars;
+    Bike bike;
+    Car car;
+    Plane plane;
+    Rocket rocket;
+
+    @Before
+    public void setUp(){
+        bike = new Bike();
+        car = new Car();
+        plane = new Plane();
+        rocket = new Rocket();
+        listOfAvatars = Arrays.asList(bike, car, plane, rocket);
+        player = new Player(listOfAvatars, bike);
+    }
+
+    @Test
+    public void testCanary(){
+        assertTrue(true);
+    }
+
+    @Test
+    public void testToPerformActionOfBike(){
+        Bike bikeSpy = spy(new Bike());
+        player = new Player(listOfAvatars, bikeSpy);
+        player.performAction();
+        verify(bikeSpy).performAction();
+    }
+
+    @Test
+    public void testToTransformFromBikeToCar(){
+        player.transform(Direction.valueOf("NEXT"));
+        assertEquals(car, player.getCurrentAvatar());
+    }
+
+    @Test
+    public void testToTransformFromBikeToRocket(){
+        player.transform(Direction.PREVIOUS);
+        assertEquals(rocket, player.getCurrentAvatar());
+    }
+
+    @Test
+    public void testToTransformFromBikeToPlane(){
+        player.transform(Direction.PREVIOUS);
+        player.transform(Direction.PREVIOUS);
+        assertEquals(plane, player.getCurrentAvatar());
+    }
+
+    @Test
+    public void testToTransformFromBikeToBike(){
+        player.transform(Direction.NEXT);
+        player.transform(Direction.NEXT);
+        player.transform(Direction.NEXT);
+        player.transform(Direction.NEXT);
+        assertEquals(bike, player.getCurrentAvatar());
+    }
+}

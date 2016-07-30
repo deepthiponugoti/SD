@@ -1,0 +1,28 @@
+package assign4;
+
+public class Avatar {
+    private String name;
+    private Avatar nextAvatar;
+    private Avatar previousAvatar;
+
+    public Avatar(String theName){
+        name = theName;
+    }
+
+    public void setAvatars(Avatar thePreviousAvatar, Avatar theNextAvatar){
+        previousAvatar = thePreviousAvatar;
+        nextAvatar = theNextAvatar;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Avatar getPreviousAvatar() {
+        return previousAvatar;
+    }
+
+    public Avatar getNextAvatar() {
+        return nextAvatar;
+    }
+}

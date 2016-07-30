@@ -1,0 +1,76 @@
+package assign4;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import java.util.Arrays;
+import java.util.List;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+public class TransformAvatarTest {
+
+    TransformAvatar transformAvatar;
+    Avatar bike;
+    Avatar car;
+    Avatar plane;
+    Avatar rocket;
+    private final String  backward = "BACKWARD";
+    private final String forward = "FORWARD";
+
+    @Before
+    public void setUp(){
+        transformAvatar = new TransformAvatar();
+        bike = new Avatar("Bike");
+        car = new Avatar("Car");
+        plane = new Avatar("Plane");
+        rocket = new Avatar("Rocket");
+        bike.setAvatars(rocket, car);
+        car.setAvatars(bike, plane);
+        plane.setAvatars(car, rocket);
+        rocket.setAvatars(plane, bike);
+    }
+
+    @Test
+    public void testCanary() {
+        assertTrue(true);
+    }
+
+//Venkat: Remove, does not help lead the design idea, instead with a simple test, transform from first to next
+    @Test
+    public void checkWhenTheCurrentStateIsInTheMiddleOfTheList(){
+        List<Avatar> sequenceOfAvatars = Arrays.asList(bike, car, plane, rocket);
+        //Venkat: Seems complex, why do we need a sequence here? Given an avatar, we want it to go to the next, list seems unnecessary complexity.
+
+        assertEquals("Bike", transformAvatar.transform(sequenceOfAvatars, "Car", backward));
+    }
+
+    @Test
+    public void checkWhenTheCurrentStateIsFirstInTheList(){
+        List<Avatar> sequenceOfAvatars = Arrays.asList(bike, car, plane, rocket);
+
+        assertEquals("Rocket", transformAvatar.transform(sequenceOfAvatars, "Bike", backward));
+    }
+
+    @Test
+    public void checkWhenTheCurrentStateIsInTheMiddleAndNewStateShouldMoveForward(){
+        List<Avatar> sequenceOfAvatars = Arrays.asList(bike, car, plane, rocket);
+
+        assertEquals("Rocket", transformAvatar.transform(sequenceOfAvatars, "Plane", forward));
+    }
+
+    @Test
+    public void checkWhenTheCurrentStateIsInTheLastAndNewStateShouldMoveForward(){
+        List<Avatar> sequenceOfAvatars = Arrays.asList(bike, car, plane, rocket);
+
+        assertEquals("Bike", transformAvatar.transform(sequenceOfAvatars, "Rocket", forward));
+    }
+
+    @Test
+    public void checkForTheStateChangeWhenTheCurrentStateIsInvalid(){
+        List<Avatar> sequenceOfAvatars = Arrays.asList(bike, car, plane, rocket);
+
+        assertEquals("Invalid Avatar", transformAvatar.transform(sequenceOfAvatars, "Van", forward));
+    }
+}

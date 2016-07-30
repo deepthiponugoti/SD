@@ -1,0 +1,36 @@
+package assign4;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class AvatarFactory {
+    public Avatar createAvatarFromClassName(String avatar) {
+        try {
+            String fullClassName = "assign4." + avatar;
+            return (Avatar) Class.forName(fullClassName).newInstance();
+        }
+        catch (Exception ex) {
+            throw new RuntimeException("An unknown avatar name was given");
+        }
+    }
+
+    public List<Avatar> generateListOfAvatarsFromTheFile(String filename) {
+        List<Avatar> listOfAvatars = new ArrayList<>();
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(filename));
+            String avatarName;
+            while ((avatarName = br.readLine()) != null) {
+                Avatar avatarObject = createAvatarFromClassName(avatarName);
+                listOfAvatars.add(avatarObject);
+            }
+
+            return listOfAvatars;
+        }
+        catch (IOException ex){
+            throw new RuntimeException("File not found");
+        }
+    }
+}

@@ -1,0 +1,46 @@
+package assign3;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
+abstract class FibonacciBaseClassTest {
+
+    private FibonacciNumbers fibonacciNumbers;
+    @Before
+    public void setUp()
+    {
+        fibonacciNumbers = new FibonacciNumbers();
+    }
+
+    public FibonacciNumbers getFibonacciNumbers()
+    {
+        return fibonacciNumbers;
+    }
+
+    abstract int callGetValue(int position);
+
+    @Test
+    public void checkForZerothPositionValueFromVirtualFunction(){
+        assertEquals(1, callGetValue(0));
+    }
+
+    @Test
+    public void checkForFirstPositionValueFromVirtualFunction(){
+        assertEquals(1, callGetValue(1));
+    }
+
+    @Test
+    public void checkForFourthPositionValueFromVirtualFunction(){
+        assertEquals(5, callGetValue(4));
+    }
+
+    @Test
+    public void checkForSixthPositionValueFromVirtualFunction(){
+        assertEquals(13, callGetValue(6));
+    }
+
+}
+
+

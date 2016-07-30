@@ -1,0 +1,13 @@
+package assign4;
+public class AvatarFactory {
+  //Venkat: createAvatarFromClassName
+    public Avatar getAvatarObjectForString(String avatar) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
+        try {
+            String fullClassName = "assign4." + avatar;
+            return (Avatar) Class.forName(fullClassName).newInstance();
+        }
+        catch (ClassNotFoundException ex) {
+            throw new RuntimeException("An unknown avatar in the list"); //Venkat: An unknown avatar name was given (don't know here that it is from a list)
+        }
+    }
+}

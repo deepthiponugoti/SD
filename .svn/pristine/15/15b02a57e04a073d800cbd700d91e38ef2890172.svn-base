@@ -1,0 +1,32 @@
+package assign3;
+
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
+public class FibonacciNumbersMemoizedTest extends FibonacciNumbersTest {
+
+    @Override
+    public int callGetValue(int position) {
+        return getFibonacciNumbers().getValueMemoized(position);
+    }
+
+    @Test
+    public void checkForTheSpeedOfMemoizedVersionIfValueIsAlreadyComputed(){
+
+        callGetValue(39);
+        callGetValue(38);
+
+        long memoizedStartTime = System.nanoTime();
+        callGetValue(40);
+        long memoizedEndTime = System.nanoTime();
+
+        long recursiveStartTime = System.nanoTime();
+        getFibonacciNumbers().getValueRecursive(40);
+        long recursiveEndTime = System.nanoTime();
+
+        boolean isGreater = (memoizedEndTime - memoizedStartTime) < (recursiveEndTime - recursiveStartTime);
+
+        assertEquals(true, isGreater);
+    }
+}

@@ -1,0 +1,49 @@
+package assign4;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
+
+public class AvatarFactoryTest {
+
+    AvatarFactory avatarFactory;
+
+    @Before
+    public void setUp(){
+        avatarFactory = new AvatarFactory();
+    }
+
+    @Test
+    public void testCanary(){
+        assertTrue(true);
+    }
+
+    @Test
+    public void checkForBikeObject(){ //Venkat: Remove try and catch, this is a possitive test, should have no try-catch
+        try {
+            Avatar avatar = avatarFactory.getAvatarObjectForString("Bike");
+            assertTrue(avatar instanceof Bike);
+        }
+        catch (Exception ex){
+            fail("Test should not come here");
+        }
+    }
+
+    @Test
+    public void checkForUnknownAvatarInTheList(){ //Venkat: On catch, not two.
+        try {
+            avatarFactory.getAvatarObjectForString("ship");
+        }
+        catch (RuntimeException ex){
+            assertEquals("An unknown avatar in the list", ex.getMessage());
+        }
+        catch (Exception ex){
+            fail("Test should not come here");
+        }
+    }
+    
+    //Venkat: More tests.
+}

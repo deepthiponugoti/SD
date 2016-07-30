@@ -1,0 +1,44 @@
+ HW3: Due 11:59PM August 14th
+
+1. What design principles did you use in assignment 3? Discuss.
+
+a)SRP :  We honoured SRP (Single Responsibility Principle) by implementing  different test classes for all the three Fibonacci implementations as each test class should be responsible for only one main responsibility. If we had implemented all the tests in one class then we would have violated SRP as one class deals with all the three similar methods tests cases. 
+
+b)DRY :  As Recursive and Iterative have similar kind of methods in these two test classes, we used the DRY (Don't Repeat Yourself) Principle by implementing a OO technique called "Triangulate". In this all the common things between these two classes are moved to a separate class keeping the difference in other two respective classes.
+		 
+
+
+
+2. What design patterns did you use in assignment 3? Discuss.
+
+a) Cascade Method Pattern : By using this pattern we have implemented getValueIterative method in such way that it is very fluent and has less number of noise in it. 
+b) Iterator Pattern       : In this getValueIterative method Iterator Pattern is implemented and the elements are accessed sequentially.
+c) Factory Method         : Here the derived classes like FibonacciNumbersIterationTest, FibonacciNumbersMemoizedTest, FibonacciNumbersRecursiveTest, makes the decisions and use of objects in other(FibonacciNumbers) class.
+
+
+3. What design principles did you use in assignment 4? Discuss.
+
+a)OCP   : We used OCP (Open Closed Principle) by implementing the code in such a way that, the code doesn't break at any time when a new avatar is added.
+
+b)YAGNI : Initially we have created the classes for all the avatars which lead us to the violation of YAGNI principle. Then we just started with the "Bike" class, implemented the transformations and actions on that particular avatar. At the end, all the avatars were implemented similar to the Bike.
+		
+c)DIP  : Here all the avatars are extending from Avatar interface and other concrete class Player is using the object of avatar resulting in the use of DIP principle.
+
+d)SRP :  Here each avatar class deals with its own separate responsibility. This is a place where SRP is honoured.
+
+e)DRY :  We honoured DRY in all the avatar classes (Bke.java, Car.java).
+
+4. What design patterns did you use in assignment 4? Discuss?
+
+a) Cascade Method Pattern   : We have removed some noise in AvatarFactory class by implementing functional style of programming in "generateListOfAvatarsFromTheFile" method.
+
+b) Abstract Factory Pattern : Used Abstract Factory Pattern and extended all the families of products (like Bike.java, Car.java) from the method createAvatarFromClassName in AvatarFactory Class without violating OCP.
+
+
+
+
+
+
+
+
+

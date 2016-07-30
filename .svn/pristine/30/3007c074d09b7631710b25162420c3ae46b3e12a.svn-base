@@ -1,0 +1,25 @@
+package assign3;
+
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
+public class FibonacciBaseClassTest { //Venkat: Make this class abstract
+
+  //Venkat: create a private field FibonacciNumbers fibonacciNumbers
+  //Venkat: In the setup initilize that field
+  
+  //Venkat: Write a method getFibonacciNumbers that returns the above field.
+  //Venkat: Write an abstrac method callGetValue that takes an it and returns an int
+  
+  //Venkat: Write all the tests in this test class where in each test do assertEquals(expected, callGetValue(position));
+    public int fibonacciSeries(int position){
+        return 1;
+    }
+
+    @Test
+    public void checkForFirstPositionValueFromVirtualFunction(){
+        assertEquals(1, fibonacciSeries(1));
+    }
+}
+

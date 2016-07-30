@@ -1,0 +1,56 @@
+package assign4;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+public class TransformAvatarTest {
+
+    TransformAvatar transformAvatar;
+    Avatar bike;
+    Avatar car;
+    Avatar plane;
+    Avatar rocket;
+    private final String previous = "PREVIOUS";
+    private final String next = "NEXT";
+
+    @Before
+    public void setUp(){
+        transformAvatar = new TransformAvatar();
+        bike = new Avatar();
+        car = new Avatar();
+        plane = new Avatar();
+        rocket = new Avatar();
+        bike.setAvatars(rocket, car);
+        car.setAvatars(bike, plane);
+        plane.setAvatars(car, rocket);
+        rocket.setAvatars(plane, bike);
+    }
+
+    @Test
+    public void testCanary() {
+        assertTrue(true);
+    }
+
+    @Test
+    public void testToTransformFromFirstToNextAvatar(){
+        assertEquals(car, transformAvatar.transform(bike, next));
+    }
+
+    @Test
+    public void testToTransformFromFirstToPrevious(){
+        assertEquals(rocket, transformAvatar.transform(bike, previous));
+    }
+
+    @Test
+    public void testToTransformFromLastToNext(){
+        assertEquals(bike, transformAvatar.transform(rocket, next));
+    }
+
+    @Test
+    public void testToTransformFromLastToPrevious(){
+        assertEquals(plane, transformAvatar.transform(rocket, previous));
+    }
+}
